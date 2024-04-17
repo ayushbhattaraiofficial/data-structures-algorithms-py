@@ -2,12 +2,21 @@ from dsa_queue import Queue
 from dsa_stack import Stack
 from recursions.recursion_factorial import Factorial
 from recursions.recursion_fibonacci import Fibonacci
+from recursions.recursion_sum import SumOfNaturalNumber
+from recursions.tower_of_hanoi import TowerOfHanoi
 
 
 def main():
     user_name = input("Enter your username\n")
     print(f"Hello and Welcome, {user_name}")
-    print(f"1. Stack\n2. Queue\n3. Fibonacci\n4. Factorial")
+    print(
+        f"""1. Stack
+2. Queue
+3. Fibonacci
+4. Factorial
+5. Sum of Natural Numbers
+6. Tower of Hanoi"""
+    )
     user_choice = int(
         input("Press the number on the list to call the function\n")
     )
@@ -19,6 +28,10 @@ def main():
         call = Fibonacci().run()
     elif user_choice == 4:
         call = Factorial().run()
+    elif user_choice == 5:
+        call = SumOfNaturalNumber().run()
+    elif user_choice == 6:
+        call = TowerOfHanoi().run()
 
 
 if __name__ == "__main__":
